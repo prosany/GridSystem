@@ -26,8 +26,9 @@ function App() {
 
   return (
     <>
+      {dataCount < 1 ? <p className="DataCountInfo">No Data Found or Maybe All Data Deleted.</p> : ''}
       <div className="gridContainer">
-        {dataCount < 1 ? <p className="DataCountInfo">All Data Deleted.</p> : newData.map((data, xid) => <Home key={xid} id={xid} remove={remove} data={data} />)}
+        {newData.map((data, xid) => <Home key={xid} id={xid} remove={remove} data={data} />)}
       </div>
     </>
   );
